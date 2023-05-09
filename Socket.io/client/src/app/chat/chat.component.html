@@ -1,0 +1,22 @@
+
+<button (click)="sendMessage()">Send Message .</button>
+
+<!-- <input class="form-control"
+    type="text"
+    (keydown)="this.userMessageEvent.next($event)"
+> -->
+
+ <input class="form-control" [(ngModel)]="newMessage"
+type="text" name="userQuestion" id="txt2"
+(keydown)="this.userMessageEvent.next($event)"
+
+>
+
+
+<div *ngFor="let message of messageList">
+  <li>
+      {{message.text}}
+  </li>
+</div>
+<!-- <div>{{messageList | json}}</div> -->
+

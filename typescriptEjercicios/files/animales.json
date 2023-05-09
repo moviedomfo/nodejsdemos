@@ -1,0 +1,128 @@
+[
+  {
+    "NombreEspecie": "León",
+    "NombreCientifico": "Panthera leo",
+    "Familia": "Felidae",
+    "Clasificacion": "carnívoro",
+    "Oviparo": false,
+    "Invertebrado": false,
+    "Omnívoro": false
+  },
+  {
+    "NombreEspecie": "Jirafa",
+    "NombreCientifico": "Giraffa camelopardalis",
+    "Familia": "Giraffidae",
+    "Clasificacion": "herbívoro",
+    "Oviparo": false,
+    "Invertebrado": false,
+    "Omnívoro": false
+  },
+  {
+    "NombreEspecie": "Oso polar",
+    "NombreCientifico": "Ursus maritimus",
+    "Familia": "Ursidae",
+    "Clasificacion": "carnívoro",
+    "Oviparo": false,
+    "Invertebrado": false,
+    "Omnívoro": true
+  },
+  {
+    "NombreEspecie": "Cocodrilo",
+    "NombreCientifico": "Crocodylus niloticus",
+    "Familia": "Crocodylidae",
+    "Clasificacion": "carnívoro",
+    "Oviparo": true,
+    "Invertebrado": false,
+    "Omnívoro": false
+  },
+  {
+    "NombreEspecie": "Elefante",
+    "NombreCientifico": "Loxodonta africana",
+    "Familia": "Elephantidae",
+    "Clasificacion": "herbívoro",
+    "Oviparo": false,
+    "Invertebrado": false,
+    "Omnívoro": false
+  },
+  {
+    "NombreEspecie": "Pingüino",
+    "NombreCientifico": "Spheniscidae",
+    "Familia": "Spheniscidae",
+    "Clasificacion": "carnívoro",
+    "Oviparo": true,
+    "Invertebrado": false,
+    "Omnívoro": false
+  },
+  {
+    "NombreEspecie": "Murciélago",
+    "NombreCientifico": "Chiroptera",
+    "Familia": "Mammalia",
+    "Clasificacion": "omnívoro",
+    "Oviparo": false,
+    "Invertebrado": false,
+    "Omnívoro": false
+  },
+  {
+    "NombreEspecie": "Murciélago",
+    "NombreCientifico": "Chiroptera",
+    "Familia": "Mammalia",
+    "Clasificacion": "omnívoro",
+    "Oviparo": false,
+    "Invertebrado": false,
+    "Omnívoro": false
+  },
+  {
+    "NombreEspecie": "Oso polar",
+    "NombreCientifico": "Ursus maritimus",
+    "Familia": "Ursidae",
+    "Clasificacion": "carnívoro",
+    "Oviparo": false,
+    "Invertebrado": false,
+    "Omnívoro": true
+  },
+  {
+    "NombreEspecie": "Cebra",
+    "NombreCientifico": "Equus quagga",
+    "Familia": "Equidae",
+    "Clasificacion": "herbívoro",
+    "Oviparo": false,
+    "Invertebrado": false,
+    "Omnívoro": false
+  },
+  {
+    "NombreEspecie": "Rana",
+    "NombreCientifico": "Lithobates catesbeianus",
+    "Familia": "Ranidae",
+    "Clasificacion": "carnívoro",
+    "Oviparo": true,
+    "Invertebrado": false,
+    "Omnívoro": false
+  },
+  {
+    "NombreEspecie": "Murciélago",
+    "NombreCientifico": "Chiroptera",
+    "Familia": "Mammalia",
+    "Clasificacion": "omnívoro",
+    "Oviparo": false,
+    "Invertebrado": false,
+    "Omnívoro": false
+  },
+  {
+    "NombreEspecie": "Cocodrilo",
+    "NombreCientifico": "Crocodylus niloticus",
+    "Familia": "Crocodylidae",
+    "Clasificacion": "carnívoro",
+    "Oviparo": true,
+    "Invertebrado": false,
+    "Omnívoro": false
+  },
+  {
+    "NombreEspecie": "León",
+    "NombreCientifico": "Panthera leo",
+    "Familia": "Felidae",
+    "Clasificacion": "carnívoro",
+    "Oviparo": false,
+    "Invertebrado": false,
+    "Omnívoro": false
+  }
+]

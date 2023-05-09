@@ -1,0 +1,11 @@
+{
+    "setting": {
+        "apiUrlBase" : "http://localhost:58000/",
+        "sourceFolder": "e:\\prod\\",
+        "destFolder": "c:\\Users\\moviedo\\Dropbox\\celam\\Cobranzas\\",
+        "messagesCount": 1,
+        "messagesTimeout": 60
+
+  }
+  
+}

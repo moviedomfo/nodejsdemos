@@ -1,0 +1,44 @@
+1) Dado un string, cree una funcion reverse que invierta el orden de sus caracteres: No usar desestructuracion ni recursion
+
+    'Hola mundo' --> odnum aloH
+
+2) Dado un string, cree una funcion que invierta el orden de sus caracteres. Usar desestructuracion
+
+3) Dado un string, invertirla recursivamente.
+
+4) Dado un string, cree una funcion que invierta el orden de sus caracteres sin utilizar un nuevo string (modificar en el mismo string)
+
+    En js mm no se puede dado q un string es inmutable
+
+5) crear una funcion isPalindrome que indique si una frase es palindrmo o no. 
+    "Yo dono rosas, oro no doy"
+
+
+6) Dado este Array de objetos 
+    var persons = [
+        { name: 'Edward', value: 21 },
+        { name: 'Sharpe', value: 37 },
+        { name: 'And', value: 45 },
+        { name: 'The', value: -12 },
+        { name: 'Magnetic', value: 13 },
+        { name: 'Zeros', value: 37 }
+    ];
+
+    Crea un nuevo vector donde pone nombre como index del objeto
+       RES=      {
+        Edward: { name: 'Edward', value: 21 },
+        Sharpe: { name: 'Sharpe', value: 37 },
+        And: { name: 'And', value: 45 },
+        The: { name: 'The', value: -12 },
+        Magnetic: { name: 'Magnetic', value: 13 },
+        Zeros: { name: 'Zeros', value: 37 }
+}
+
+
+7) Invertir las palabras de una frase, manteniendo el lugar de cada palablra
+
+    'Hola mundo' --> 'aloH odnum'
+
+
+
+8)Resolviendo una entrevista para programador JavaScript en Globant - El call stack javascript

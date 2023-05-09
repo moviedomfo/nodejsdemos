@@ -1,0 +1,35 @@
+{
+  // "extends": "@tsconfig/node14/tsconfig.json",
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "Node16",
+    "lib": ["es6", "dom"],
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "declaration": false,
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "noLib": false,
+    "allowJs": true,
+    // "suppressImplicitAnyIndexErrors": true,
+    "skipLibCheck": true,
+    // "rootDir": "./src",
+    "outDir": "dist",
+    "baseUrl": "./",
+
+    //Rutas absolutas de los componentes. requiere tsconfig-paths en el script
+    "paths": {
+      "@common/*": ["common/*"],
+      "@models/*": ["models/*"],
+      "@services/*": ["services/*"]
+    },
+    "noEmit": false,
+    "strict": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "types": ["reflect-metadata"],
+    "typeRoots": ["./node_modules/@types"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["**/node_modules", "**/build", "**/dist", "**/*.md", "**/rollup.config.js"]
+}
