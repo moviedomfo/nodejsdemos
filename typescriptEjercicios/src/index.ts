@@ -3,7 +3,8 @@ import {BuscarImpares, BuscarImparesMap} from "./BuscarImpares";
 import IsPalindrome from "./Polindromo";
 import buscarImparFromArrays from "./ArrayImparCounter";
 import buscarRepetidos from "./BuscarRepetidos";
-import { UsoAND, UsoOR } from "./operadores";
+import {UsoAND, UsoOR} from "./operadores";
+import {ServerSocket} from "./Object";
 
 // const message = "Pelsoft";
 // console.log(`Wellcome to ${message} interview  exercises `);
@@ -32,5 +33,16 @@ import { UsoAND, UsoOR } from "./operadores";
 // console.log(`------Dado un array de numeros encontrar aquel que aparece un numero impar de veses-------------------------------------------------`);
 // buscarImparFromArrays();
 
-UsoAND()
-UsoOR();
+// UsoAND()
+// UsoOR();
+
+const server = new ServerSocket();
+
+server.NewUser("moviedo");
+server.NewUser("catalina");
+server.NewUser("brenda");
+const users = server.getAll();
+
+console.log(users);
+
+console.info(server.GetByName("catalina"));

@@ -130,3 +130,5 @@ dist
 .pnp.*
 
 node_modules/
+kafka/Worker/Pelsoft.Log.Worker/Pelsoft.Log.Comerce/obj/Debug/net6.0/Pelsoft.Log.Comerce.assets.cache
+obj/
