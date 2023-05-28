@@ -130,5 +130,17 @@ dist
 .pnp.*
 
 node_modules/
-kafka/Worker/Pelsoft.Log.Worker/Pelsoft.Log.Comerce/obj/Debug/net6.0/Pelsoft.Log.Comerce.assets.cache
 obj/
+bin/
+kafka/Worker/Pelsoft.Log.Worker/Pelsoft.Log.Comerce/obj/Debug/net6.0/Pelsoft.Log.Comerce.assets.cache
+kafka/Worker/Pelsoft.Log.Worker/Pelsoft.Log.Comerce/obj/Debug/net6.0/Pelsoft.Log.Comerce.csproj.AssemblyReference.cache
+kafka/Worker/Pelsoft.Log.Worker/Pelsoft.Log.Comerce/obj/Debug/net6.0/Pelsoft.Log.Comerce.GeneratedMSBuildEditorConfig.editorconfig
+kafka/Worker/Pelsoft.Log.Worker/Pelsoft.Log.Common/obj/Debug/net6.0/Pelsoft.Log.Common.assets.cache
+kafka/Worker/Pelsoft.Log.Worker/Pelsoft.Log.Common/obj/Debug/net6.0/Pelsoft.Log.Common.csproj.AssemblyReference.cache
+kafka/Worker/Pelsoft.Log.Worker/Pelsoft.Log.Common/obj/Debug/net6.0/Pelsoft.Log.Common.GeneratedMSBuildEditorConfig.editorconfig
+kafka/Worker/Pelsoft.Log.Worker/Pelsoft.Log.WhatsApp/obj/Debug/net6.0/Pelsoft.Log.WhatsApp.assets.cache
+kafka/Worker/Pelsoft.Log.Worker/Pelsoft.Log.WhatsApp/obj/Debug/net6.0/Pelsoft.Log.WhatsApp.csproj.AssemblyReference.cache
+kafka/Worker/Pelsoft.Log.Worker/Pelsoft.Log.WhatsApp/obj/Debug/net6.0/Pelsoft.Log.WhatsApp.GeneratedMSBuildEditorConfig.editorconfig
+kafka/Worker/Pelsoft.Log.Worker/WorkerServiceKon/obj/Debug/net6.0/WorkerServiceKon.assets.cache
+kafka/Worker/Pelsoft.Log.Worker/WorkerServiceKon/obj/Debug/net6.0/WorkerServiceKon.csproj.AssemblyReference.cache
+kafka/Worker/Pelsoft.Log.Worker/WorkerServiceKon/obj/Debug/net6.0/WorkerServiceKon.GeneratedMSBuildEditorConfig.editorconfig
