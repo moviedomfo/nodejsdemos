@@ -55,14 +55,55 @@ namespace WorkerServiceKon.workers
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
             //Do your preparation (e.g. Start code) here
-            while (!stoppingToken.IsCancellationRequested)
-            {
-                await DoSomethingAsync();
-            }
-
+            //while (!stoppingToken.IsCancellationRequested)
+            //{
+            //    await DoSomethingAsync();
+            //}
+            await getDomains();
 
         }
+        public async Task<string> getDomains()
+        {
+            using var client = new HttpClient();
 
+            var request = new HttpRequestMessage()
+            {
+                Method = HttpMethod.Get,
+                RequestUri = new Uri("http://172.22.14.113:50010/api/meucci/retriveDomains")
+            };
+
+            try
+            {
+                request.Content = new StringContent("", Encoding.UTF8, "application/json");
+                var response = await client.SendAsync(request);
+
+                //HttpResponseMessage response = await client.PostAsJsonAsync(apiUrl, content);
+                if (response.IsSuccessStatusCode)
+                {
+                    // Lee la respuesta como una cadena JSON
+                    var jsonResponse = await response.Content.ReadAsStringAsync();
+
+                    // Procesa la respuesta como desees
+                    Console.WriteLine(jsonResponse);
+                }
+                else
+                {
+                    // Maneja el caso de una respuesta no exitosa
+                    Console.WriteLine("La llamada a la API no fue exitosa. Código de estado: " + response.StatusCode);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw ex;
+            }
+
+            //var resToJson = JsonConvert.SerializeObject(response);
+            return "";
+
+        }
         Task DoSomethingAsync()
         {
             return Task.Run(() =>
