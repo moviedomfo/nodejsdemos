@@ -8,3 +8,4 @@ export interface Animal {
     Omnívoro: boolean;
   }
   
+ 
