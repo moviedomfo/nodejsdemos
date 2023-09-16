@@ -5,6 +5,7 @@ import buscarImparFromArrays from "./ArrayImparCounter";
 import buscarRepetidos from "./BuscarRepetidos";
 import {UsoAND, UsoOR} from "./operadores";
 import {ServerSocket} from "./Object";
+import {ShowNumbers, ShowNumbersUse} from "./Conceptos/arrowFunctions";
 
 // const message = "Pelsoft";
 // console.log(`Wellcome to ${message} interview  exercises `);
@@ -36,13 +37,15 @@ import {ServerSocket} from "./Object";
 // UsoAND()
 // UsoOR();
 
-const server = new ServerSocket();
+// const server = new ServerSocket();
 
-server.NewUser("moviedo");
-server.NewUser("catalina");
-server.NewUser("brenda");
-const users = server.getAll();
+// server.NewUser("moviedo");
+// server.NewUser("catalina");
+// server.NewUser("brenda");
+// const users = server.getAll();
 
-console.log(users);
+// console.log(users);
 
-console.info(server.GetByName("catalina"));
+// console.info(server.GetByName("catalina"));
+
+ShowNumbersUse();
