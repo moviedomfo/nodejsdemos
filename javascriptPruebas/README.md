@@ -46,6 +46,8 @@ https://smallstep.com/hello-mtls/doc/combined/nodejs/axios
 
 ## index index Spreed operator Samples
 
+## index2 Operaciones con vectores: Copy spread operator
+
 ## index3 Uso de map
 
 ## index4 - Uso de Copy con: VECTORES Referencia spread, map , slice

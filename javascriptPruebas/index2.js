@@ -36,12 +36,12 @@ console.log();
 
 
 // console.log(chalk.yellow("******************** OPERACIONES CON ARREGLOS*********************************"));
-console.log(chalk.cyan("--------------[arrayCopy + arrayCopy2] CONTACT ALL IN STRING arrayUnion ----------------"));console.log();
+console.log(chalk.cyan("--------------[arrayCopy + arrayCopy2] CONCACT ALL IN STRING arrayUnion ----------------"));console.log();
 const arrayUnion = [arrayCopy + arrayCopy2];
 console.log(arrayUnion);
 console.log();
 
-console.log(chalk.cyan("--------------[...arrayCopy, ...arrayCopy2] Copiamos los elementos del vector 2 al primeros----------------"));console.log();
+console.log(chalk.cyan("--------------[...arrayCopy, ...arrayCopy2] Copiamos los elementos del vector 2 al primero----------------"));console.log();
 const sumOfArrays = [...arrayCopy, ...arrayCopy2];
 
 console.log(sumOfArrays);
@@ -51,7 +51,7 @@ const arrayDoble = [arrayCopy , arrayCopy2];
 console.log(arrayDoble);
 
 
-console.log(chalk.cyan("--------------  [...numeros,letras] Aqui metermos el segundo vector como elemento del primero----------------"));
+console.log(chalk.cyan("--------------  [...numeros,letras] Aqui metemos el segundo vector como elemento del primero----------------"));
 console.log();
 const arrayNumeresLetras = [...numeros,letras];
 console.log();

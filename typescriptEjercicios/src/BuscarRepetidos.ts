@@ -2,7 +2,7 @@
 // Solo mostrar aquellos que repiten
 
 import {FileFunctions} from "fwk-libs/dist/helpers/fileFunctions";
-import {Animal} from "./animales";
+import {Animal} from "./Entities";
 
 const animalesPath = "./files/animales.json";
 

@@ -6,6 +6,7 @@ import buscarRepetidos from "./BuscarRepetidos";
 import {UsoAND, UsoOR} from "./operadores";
 import {ServerSocket} from "./Object";
 import {ShowNumbers, ShowNumbersUse} from "./Conceptos/arrowFunctions";
+import { CloneMethods } from "./Conceptos/clone";
 
 // const message = "Pelsoft";
 // console.log(`Wellcome to ${message} interview  exercises `);
@@ -48,4 +49,8 @@ import {ShowNumbers, ShowNumbersUse} from "./Conceptos/arrowFunctions";
 
 // console.info(server.GetByName("catalina"));
 
-ShowNumbersUse();
+//ShowNumbersUse();
+
+// CloneMethods.DeepBlue();
+CloneMethods.Shadow_Copy();
+CloneMethods.Structured_Clone();

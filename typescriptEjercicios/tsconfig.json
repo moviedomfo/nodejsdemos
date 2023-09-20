@@ -25,6 +25,8 @@
     },
     "noEmit": false,
     "strict": false,
+    "strictFunctionTypes": false,
+    
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "types": ["reflect-metadata"],
