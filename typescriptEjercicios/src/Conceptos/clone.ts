@@ -7,8 +7,8 @@ const originalCustomer = new Customer(1, "Juan", originalAddress);
 export class CloneMethods {
   constructor() {}
 
-  public static DeepBlue = () => {
-    console.log("DeepBlue");
+  public static DeepCopy = () => {
+    console.log("DeepCopy");
     const clonedCustomer = originalCustomer.clone();
     //En este ejemplo, hemos agregado métodos clone() a las clases Address y Customer para realizar una clonación profunda. El resultado es que clonedCustomer es una instancia completamente independiente de originalCustomer, incluida su dirección, lo que garantiza una clonación profunda de los objetos.
     // Verificamos que la clonación profunda funcionó
@@ -19,42 +19,66 @@ export class CloneMethods {
   public static Spreed_Prototype = () => {
     console.log(" Object.setPrototypeOf(clone, Object.getPrototypeOf(obj));");
 
-    const clonedCustomer = cloneObjectArrow<Customer>(originalCustomer);
-    console.log(clonedCustomer);
+    //const clonedCustomer = cloneObjectArrow<Customer>(originalCustomer);
+    const clone = {...originalCustomer};
+
+    Object.setPrototypeOf(clone, Object.getPrototypeOf(originalCustomer));
+    console.log("clone === originalCustomer ", clone === originalCustomer);
+    console.log("clone.address === originalCustomer.address ", clone.address === originalCustomer.address);
+    console.log("clone");
+    console.log(clone);
+    console.log(clone);
   };
 
   public static Structured_Clone = () => {
-    console.log("Usando Structured Clone");
-    const otroClienteClonado1 = structuredClone(originalCustomer);
-    console.log("otroClienteClonado1 === originalCustomer ", otroClienteClonado1 === originalCustomer);
+    console.log("Using Structured Clone");
+    const clone = structuredClone(originalCustomer);
+    console.log("clone === originalCustomer ", clone === originalCustomer);
+    console.log("clone.address === originalCustomer.address ", clone.address === originalCustomer.address);
+    console.log("clone");
+    console.log(clone);
   };
   public static Shadow_Copy = () => {
     //Shadow copy -> Se clonan los escalares pero los objetos complejos no. solo se pasan las referencias
-    console.log("usando Shadow copy Object.assig");
-    const otroClienteClonado2 = Object.assign(originalCustomer);
-    console.log("otroClienteClonado2 === originalCustomer ", otroClienteClonado2 === originalCustomer);
-    console.log("otroClienteClonado");
-    console.log(otroClienteClonado2);
-    console.log("originalCustomer");
-    console.log(originalCustomer);
+    console.log("Using Shadow copy Object.assig");
+    const clone = Object.assign(originalCustomer);
+    console.log("clone === originalCustomer ", clone === originalCustomer);
+    console.log("clone.address === originalCustomer.address ", clone.address === originalCustomer.address);
+    console.log("clone");
+    console.log(clone);
+  };
+
+  //SON.parse and JSON.stringify (Deep Copy):
+  public static JSON_parse_strinfy = () => {
+    console.log("Using JSON.parse and JSON.stringify  (Deep Copy)");
+    const clone = JSON.parse(JSON.stringify(originalCustomer));
+    console.log("clone === originalCustomer ", clone === originalCustomer);
+    console.log("clone.address === originalCustomer.address ", clone.address === originalCustomer.address);
+    console.log("clone");
+    console.log(clone);
   };
 }
 
+/**
+ * using setPrototypeOf & getPrototypeOf
+ * @param obj
+ * @returns
+ */
 const cloneObjectArrow = <T extends object>(obj: T) => {
   const clone = {...obj};
 
   Object.setPrototypeOf(clone, Object.getPrototypeOf(obj));
   return clone;
 };
+
+/**
+ *  using setPrototypeOf & getPrototypeOf
+ * @param obj
+ * @returns
+ */
 function cloneObject<T extends Object>(obj: T) {
   const clone = {...obj};
 
   Object.setPrototypeOf(clone, Object.getPrototypeOf(obj));
   return clone;
 }
-
-console.log("usando Spread operator funciona igual pero agregamos uso de setPrototypeOf y getPrototypeOf");
-const otroClienteClonado3_spread = {...originalCustomer};
-Object.setPrototypeOf(otroClienteClonado3_spread, Object.getPrototypeOf(originalCustomer));
-
-console.log(otroClienteClonado3_spread);

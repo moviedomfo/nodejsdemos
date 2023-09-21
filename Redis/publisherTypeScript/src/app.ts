@@ -3,6 +3,7 @@ import  { Publisher } from './producer';
 import { AppSettings } from './settings';
 
 
+// como mostrar una fecha con typescript ?
 
 
 init().then(()=>{

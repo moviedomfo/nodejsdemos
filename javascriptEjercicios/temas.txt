@@ -11,8 +11,10 @@
     En js mm no se puede dado q un string es inmutable
 
 5) crear una funcion isPalindrome que indique si una frase es palindrmo o no. 
+        polindromo :Palabra o expresión que es igual si se lee de izquierda a derecha que de derecha a izquierda.
     "Yo dono rosas, oro no doy"
-
+  5.1 Solucion artesanal
+  5.1 Solucion avanzada
 
 6) Dado este Array de objetos 
     var persons = [
@@ -41,7 +43,8 @@
 
 
 
-8)Resolviendo una entrevista para programador JavaScript en Globant - El call stack javascript
+8)Resolviendo una entrevista para programador JavaScript en Globant -
+ El call stack javascript
 
 
-9)  
+9)  Dado un sting encontrar las vocales

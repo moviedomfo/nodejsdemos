@@ -7,9 +7,8 @@
   // Stack  => Pila
   
 
-
 const printCuadrado =(n)=>{
-  debugger;
+
   let cuadrado =cuadrado_fn(n);
   console.log(`El cuadrado de ${n} = ${cuadrado}`);
  
