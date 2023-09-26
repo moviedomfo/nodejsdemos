@@ -5,7 +5,7 @@ const A1 = [7, 6, 4, 7, 458, 2, 200,7]; // => 7 aparece 3 veses
 
 const store = {};
 const buscarImpar = (number: number[]): number => {
-  let foundValue;
+  let foundValue; 
 
   number.forEach((element) => {
     if (element % 2 !== 0) {
