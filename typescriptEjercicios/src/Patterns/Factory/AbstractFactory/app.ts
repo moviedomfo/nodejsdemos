@@ -1,9 +1,20 @@
-// En este ejemplo, hemos definido las interfaces IChair e ISofa para los productos y la interfaz FurnitureFactory para la
-// fábrica abstracta.
-// Luego, implementamos las clases concretas para los productos
-// (VictorianChair, VictorianSofa, ModernChair, ModernSofa) y
-// las fábricas concretas (VictorianFurnitureFactory y ModernFurnitureFactory).
-// Finalmente, mostramos cómo un cliente puede crear y utilizar muebles victorianos o modernos utilizando
+//Abstract Factory es un patrón de diseño creacional que nos permite producir familias de objetos
+//                 relacionados sin especificar sus clases concretas.
+
+// Familia de porductos (objetos a crear) Silla y Sofa
+// IChair, ISofa
+// Fábrica abstracta. --> IFornitureFactory
+// Necesitamos una forma de crear objetos individuales de mobiliario para que combinen con otros objetos de la misma familia.
+// Las clases concretas para los productos:
+//  -VictorianChair
+//  -VictorianSofa
+//  -ModernChair
+//  -ModernSofa
+// Las fábricas concretas para las fábricas
+//  -VictorianFurnitureFactory
+//  -ModernFurnitureFactory
+
+// Finalmente, un cliente puede crear y utilizar muebles victorianos o modernos utilizando
 // las fábricas correspondientes.
 // Este es un ejemplo básico del patrón Abstract Factory en TypeScript.
 // Puedes expandirlo según tus necesidades específicas y agregar más productos y fábricas si es necesario.

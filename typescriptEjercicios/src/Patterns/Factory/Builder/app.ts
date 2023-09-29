@@ -6,12 +6,14 @@ import ISoftwareBuilder, {WebAppBuilder, DeskAppBuilder} from "./SoftwareBuilder
 const softwareDeveloper_Desk = new DeskAppBuilder();
 const softwareDeveloper_web = new WebAppBuilder();
 
+// DirectordApp  Es una clase director que conduce la creacion paso a paso de los productos basandoce en 
+// los metodos o pasos q ofrece nuestro Builder
 // Build a web app
-BuildApp(softwareDeveloper_web);
+DirectordApp(softwareDeveloper_web);
 // Build a desktop app
-BuildApp(softwareDeveloper_Desk);
+DirectordApp(softwareDeveloper_Desk);
 
-function BuildApp(builder: ISoftwareBuilder) {
+function DirectordApp(builder: ISoftwareBuilder) {
   builder.plan();
   builder.design();
   builder.implement();
