@@ -40,10 +40,18 @@ export const UsoOR = () => {
 
   console.log("message || 44 = " + result);
   UsoOR_Nulo();
+  UsoOR_Undefined();
+};
+
+const UsoOR_Undefined = () => {
+  const message = undefined;
+
+  const result = message || 44;
+  console.log("message || 44 = " + result);
 };
 
 const UsoOR_Nulo = () => {
-  const message = undefined;
+  const message = null;
 
   const result = message || 44;
   console.log("message || 44 = " + result);

@@ -35,8 +35,8 @@ import { CloneMethods } from "./Conceptos/clone";
 // console.log(`------Dado un array de numeros encontrar aquel que aparece un numero impar de veses-------------------------------------------------`);
 // buscarImparFromArrays();
 
-// UsoAND()
-// UsoOR();
+UsoAND()
+ UsoOR();
 
 // const server = new ServerSocket();
 
@@ -52,5 +52,5 @@ import { CloneMethods } from "./Conceptos/clone";
 //ShowNumbersUse();
 
 // CloneMethods.DeepBlue();
-CloneMethods.Shadow_Copy();
-CloneMethods.Structured_Clone();
+// CloneMethods.Shadow_Copy();
+// CloneMethods.Structured_Clone();
