@@ -7,6 +7,9 @@ const originalCustomer = new Customer(1, "Juan", originalAddress);
 export class CloneMethods {
   constructor() {}
 
+  /**
+   * Clonacion profunda
+   */
   public static DeepCopy = () => {
     console.log("DeepCopy");
     const clonedCustomer = originalCustomer.clone();
@@ -38,6 +41,7 @@ export class CloneMethods {
     console.log("clone");
     console.log(clone);
   };
+
   public static Shadow_Copy = () => {
     //Shadow copy -> Se clonan los escalares pero los objetos complejos no. solo se pasan las referencias
     console.log("Using Shadow copy Object.assig");
@@ -48,7 +52,7 @@ export class CloneMethods {
     console.log(clone);
   };
 
-  //SON.parse and JSON.stringify (Deep Copy):
+  /**JSON.parse and JSON.stringify (Deep Copy): */
   public static JSON_parse_strinfy = () => {
     console.log("Using JSON.parse and JSON.stringify  (Deep Copy)");
     const clone = JSON.parse(JSON.stringify(originalCustomer));
@@ -71,14 +75,4 @@ const cloneObjectArrow = <T extends object>(obj: T) => {
   return clone;
 };
 
-/**
- *  using setPrototypeOf & getPrototypeOf
- * @param obj
- * @returns
- */
-function cloneObject<T extends Object>(obj: T) {
-  const clone = {...obj};
 
-  Object.setPrototypeOf(clone, Object.getPrototypeOf(obj));
-  return clone;
-}

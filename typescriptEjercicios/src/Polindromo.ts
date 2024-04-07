@@ -1,10 +1,10 @@
 /**
  *Palabra o expresión que es igual si se lee de izquierda a derecha que de derecha a izquierda.
- * @param prhase
+ * @param prahase
  */
-const IsPalindrome = (prhase: string): boolean => {
-  // convert all to lowercase 
-  const strA = prhase.replace(/[ ,]/g, "").toLowerCase();
+const IsPalindrome = (prahase: string): boolean => {
+  // clean all white space convert all to lowercase 
+  const strA = prahase.replace(/[ ,]/g, "").toLowerCase();
   // [...strA] transform in array
   const strB = [...strA].reverse().join("");
 
