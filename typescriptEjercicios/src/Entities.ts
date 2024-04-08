@@ -5,8 +5,38 @@ export interface Animal {
   Clasificacion: "carnívoro" | "herbívoro" | "omnívoro";
   Oviparo: boolean;
   Invertebrado: boolean;
-  Omnívoro: boolean;
+  Omnivoro: boolean;
 }
+export const animales: Animal[] = [
+  {
+    NombreEspecie: "León",
+    NombreCientifico: "Panthera leo",
+    Familia: "Felidae",
+    Clasificacion: "carnívoro",
+    Oviparo: false,
+    Invertebrado: false,
+    Omnivoro: false
+  },
+  {
+    NombreEspecie: "Oso",
+    NombreCientifico: "Ursidae",
+    Familia: "Ursidae",
+    Clasificacion: "omnívoro",
+    Oviparo: false,
+    Invertebrado: false,
+    Omnivoro: true
+  },
+  {
+    NombreEspecie: "Gallina",
+    NombreCientifico: "Gallus gallus domesticus",
+    Familia: "Phasianidae",
+    Clasificacion: "omnívoro",
+    Oviparo: true,
+    Invertebrado: false,
+    Omnivoro: true
+  },
+  // Puedes añadir más objetos aquí según sea necesario
+];
 
 export class Customer {
   id: number;
