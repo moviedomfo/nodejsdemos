@@ -1,13 +1,15 @@
 import DetermineMaxInArray from "./DetermineMaxInArray";
-import {BuscarImpares, BuscarImparesMap} from "./BuscarImpares";
+
 import IsPalindrome from "./Polindromo";
 import buscarImparFromArrays from "./ArrayImparCounter";
 import buscarRepetidos from "./BuscarRepetidos";
-import {UsoAND, UsoOR} from "./operadores";
-import {ServerSocket} from "./Object";
-import {ShowNumbers, ShowNumbersUse} from "./Conceptos/arrowFunctions";
+import { UsoAND, UsoOR } from "./operadores";
+import { ServerSocket } from "./Object";
+import { ShowNumbers, ShowNumbersUse } from "./Conceptos/arrowFunctions";
 import { CloneMethods } from "./Conceptos/clone";
+import { ValidarPassword_Test } from "./PasswordValidator";
 
+ValidarPassword_Test();
 // const message = "Pelsoft";
 // console.log(`Wellcome to ${message} interview  exercises `);
 // console.log(`-----------------------------Tipos animales repetidos--------------------------------------------------`);
@@ -35,8 +37,8 @@ import { CloneMethods } from "./Conceptos/clone";
 // console.log(`------Dado un array de numeros encontrar aquel que aparece un numero impar de veses-------------------------------------------------`);
 // buscarImparFromArrays();
 
-UsoAND()
- UsoOR();
+// UsoAND()
+//  UsoOR();
 
 // const server = new ServerSocket();
 
