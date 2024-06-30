@@ -8,6 +8,7 @@ import { ServerSocket } from "./Object";
 import { ShowNumbers, ShowNumbersUse } from "./Conceptos/arrowFunctions";
 import { CloneMethods } from "./Conceptos/clone";
 import { ValidarPassword_Test } from "./PasswordValidator";
+import { DateDemos } from "./DateDemos";
 
 ValidarPassword_Test();
 // const message = "Pelsoft";
@@ -56,3 +57,6 @@ ValidarPassword_Test();
 // CloneMethods.DeepBlue();
 // CloneMethods.Shadow_Copy();
 // CloneMethods.Structured_Clone();
+
+
+DateDemos.ParceUTC('2024-06-01T21:56:03.257');
