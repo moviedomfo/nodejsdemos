@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "name": "John",
+    "lastName": "Doe",
+    "address": [
+      {
+        "street": "123 Elm St",
+        "city": "Springfield",
+        "zipCode": "12345"
+      },
+      {
+        "street": "456 Maple Ave",
+        "city": "Shelbyville",
+        "zipCode": "54321"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Jane",
+    "lastName": "Smith",
+    "address": [
+      {
+        "street": "789 Oak St",
+        "city": "Capital City",
+        "zipCode": "11223"
+      },
+      {
+        "street": "321 Pine Rd",
+        "city": "Ogdenville",
+        "zipCode": "33445"
+      },
+      {
+        "street": "654 Birch Ln",
+        "city": "North Haverbrook",
+        "zipCode": "55667"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Michael",
+    "lastName": "Johnson",
+    "address": [
+      {
+        "street": "987 Cedar Ct",
+        "city": "Springfield",
+        "zipCode": "77889"
+      },
+      {
+        "street": "111 Redwood Blvd",
+        "city": "Capital City",
+        "zipCode": "99001"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Emily",
+    "lastName": "Williams",
+    "address": [
+      {
+        "street": "222 Poplar St",
+        "city": "Ogdenville",
+        "zipCode": "12321"
+      },
+      {
+        "street": "333 Chestnut Ave",
+        "city": "Shelbyville",
+        "zipCode": "32123"
+      },
+      {
+        "street": "444 Willow Rd",
+        "city": "North Haverbrook",
+        "zipCode": "45678"
+      }
+    ]
+  }
+]

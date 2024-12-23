@@ -1,5 +1,5 @@
 
-/// Funcion Sort Array
+/// Function Sort Array
 var items = [
     { name: 'Edward', value: 21 },
     { name: 'Sharpe', value: 37 },

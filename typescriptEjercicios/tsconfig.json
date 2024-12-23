@@ -3,7 +3,7 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "Node16",
-    "lib": ["ES2017", "dom"],
+    "lib": ["ES2019", "dom"],
     "esModuleInterop": true,
     "moduleResolution": "node",
     "declaration": false,

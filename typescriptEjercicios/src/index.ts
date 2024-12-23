@@ -1,16 +1,18 @@
 import DetermineMaxInArray from "./DetermineMaxInArray";
 
 import IsPalindrome from "./Polindromo";
-import buscarImparFromArrays from "./ArrayImparCounter";
-import buscarRepetidos from "./BuscarRepetidos";
+import buscarImparFromArrays from "./Arrays/ArrayImparCounter";
+import buscarRepetidos from "./Arrays/BuscarRepetidos";
 import { UsoAND, UsoOR } from "./operadores";
 import { ServerSocket } from "./Object";
 import { ShowNumbers, ShowNumbersUse } from "./Conceptos/arrowFunctions";
 import { CloneMethods } from "./Conceptos/clone";
 import { ValidarPassword_Test } from "./PasswordValidator";
 import { DateDemos } from "./DateDemos";
+import { flatPersons } from "./Arrays/flat";
+import { flatMapPersons } from "./Arrays/flatMap";
 
-ValidarPassword_Test();
+//ValidarPassword_Test();
 // const message = "Pelsoft";
 // console.log(`Wellcome to ${message} interview  exercises `);
 // console.log(`-----------------------------Tipos animales repetidos--------------------------------------------------`);
@@ -59,4 +61,10 @@ ValidarPassword_Test();
 // CloneMethods.Structured_Clone();
 
 
-DateDemos.ParceUTC('2024-06-01T21:56:03.257');
+//DateDemos.ParceUTC('2024-06-01T21:56:03.257');
+
+//Arrays
+//----flat
+//flatPersons();
+//----flatMap
+flatMapPersons();

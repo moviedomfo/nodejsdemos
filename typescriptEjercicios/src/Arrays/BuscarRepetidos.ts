@@ -1,8 +1,8 @@
 // Dado un json con tipos de animales retornar un array donde se liste cuantes veses se repite cada uno
 // Solo mostrar aquellos que repiten
 
-import {FileFunctions} from "fwk-libs/dist/helpers/fileFunctions";
-import {Animal} from "./Entities";
+import { FileFunctions } from "fwk-libs/dist/helpers/fileFunctions";
+import { Animal } from "../Entities";
 
 const animalesPath = "./files/animales.json";
 
@@ -16,7 +16,7 @@ const buscarRepetidos = async () => {
     if (!exist) {
       const count = animals.filter((f) => f.NombreEspecie === p.NombreEspecie).length;
       if (count > 1) {
-        repited.push({count, NombreEspecie: p.NombreEspecie});
+        repited.push({ count, NombreEspecie: p.NombreEspecie });
       }
     }
   });

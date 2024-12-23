@@ -4,7 +4,7 @@
 import { buscarImpar_forEach } from "./BuscarImpares";
 
 // Solo hay un impar por array
-const A1 = [7, 6, 4, 7, 458, 2, 200,7]; // => 7 aparece 3 veses
+const A1 = [7, 6, 4, 7, 458, 2, 200, 7]; // => 7 aparece 3 veses
 
 const store = {};
 

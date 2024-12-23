@@ -66,3 +66,12 @@ export class Address {
     return new Address(this.street, this.city, this.zipCode);
   }
 }
+
+export class Person {
+  id: number;
+  name: string;
+  lastName: string;
+  address: Address[];
+
+
+}
