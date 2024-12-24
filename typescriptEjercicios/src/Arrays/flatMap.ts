@@ -3,10 +3,14 @@ import { FileFunctions } from "fwk-libs/dist/helpers/fileFunctions";
 import { Person } from "src/Entities";
 
 const personsPath = "./files/persons.json";
-//El método flatMap() primero mapea cada elemento usando una función de mapeo, 
-//luego aplana el resultado en una nueva matriz. Es idéntico a un map seguido de un flattende profundidad 1, 
-// pero flatMap es a menudo útil y la fusión de ambos en un método es ligeramente más eficiente
-// //https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap
+//Combina el mapeo y el aplanado en un solo paso
+// Suponer que se cuenta con un array de personas que tienen un  array de direcciones 
+// y queremos un listado de todas las direcciones en un solo vector que no sea persona sino que sea AllAddressess
+// - Aplanado limitado a un nivel 1
+// El método flatMap() primero mapea cada elemento usando una función de mapeo, 
+// luego aplana el resultado en una nueva matriz. Es idéntico a un map seguido de un flattende profundidad 1, 
+// flatMap es ligeramente más eficiente porque evita crear arrays intermedios.
+// https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap
 export const flatMapPersons = async () => {
     const depth = 1;
     const jsonContent = await FileFunctions.OpenFile(personsPath);
@@ -31,4 +35,16 @@ export const flatMapPersons = async () => {
 
     //console.log(JSON.stringify(newArray))
     console.log(JSON.stringify(newArray2))
+}
+
+export const simpleSample = async () => {
+    const strings = ["hello", "world"];
+
+    const mapped = strings.map((str) => str.split("")); // [["h", "e", "l", "l", "o"], ["w", "o", "r", "l", "d"]]
+    const flattened = strings.flatMap((str) => str.split("")); // ["h", "e", "l", "l", "o", "w", "o", "r", "l", "d"]
+    console.log('2) Con map')
+    console.log(mapped);
+    console.log('2) Con flatMap')
+    console.log(flattened);
+
 }
