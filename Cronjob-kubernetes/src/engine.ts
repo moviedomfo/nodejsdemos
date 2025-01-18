@@ -21,7 +21,7 @@ export class Engine {
    * prevents jonns being interrupted
    */
   private isRunning: boolean;
-  
+
 
   constructor() {
     this.isRunning = false; // Variable para controlar el estado de ejecución
@@ -75,52 +75,18 @@ export class Engine {
 
         await Helper.Log(`Fetching next ${limit} SOCIOS from  ${startDateString} `, true);
 
-        const socios = await this._sociosService.Search(startDateString, limit);
-        // I there are not [socios], breack the loop
 
-        if (socios.length === 0) {
+        // Generar un número aleatorio
+        const randomNumber = Math.floor(Math.random() * 10000); // Número aleatorio entre 0 y 9999
+        await Helper.Log(`Random number generated: ${randomNumber}`, true);
+        // Verificar si el número es divisible por 7
+        if (randomNumber % 7 === 0) {
+          await Helper.Log(`Random number ${randomNumber} is divisible by 7. Stopping the loop.`, true);
 
-          break;
+          break; // Detener el bucle
         }
-        await Helper.Log(`Proccecing  ${socios.length} Socios `, true);
-
-        //forEach no pueden manejar promesas de manera que respeten el orden de ejecución asincrónica. 
-        for (const s of socios) {
-
-          const socio = await this._sociosService.get(s.numSocio);
-          const exist = await this._sociosRepo.Exist(s.numSocio, null);
-          try {
-            if (exist)
-              await this._sociosRepo.update(socio);
-            else
-              await this._sociosRepo.Insert(socio);
-
-            const report: ReportBE = new ReportBE();
-            report.fechaModif = s.modif;
-            report.numSocio = s.numSocio;
-            await this._logsService.Create(report, exist);
-
-            // /**agrego csv para reportes */
-            // await Helper.AppendCSV({
-            //   NumSocio: s.numSocio,
-            //   FechaModif: s.modif,
-            //   Action: report.action
-
-            // });
-
-            // await this._reportsRepo.Insert(report);
-
-            //Almaceno par aproxima iteracion
-            await Helper.SaveLastUpdate(s.modif);
-            //startDate = dayjs.utc(s.modif).toDate();
-            startDateString = s.modif.trim();
-          }
-          catch (error) {
-            const msg = `Error Insertar/actualizar numSocio ${s.numSocio} fechaModif : ${s.modif} `;
-            Helper.LogErrorFull(msg, error, true);
-
-          }
-        }
+        // Pausar por 1 segundo
+        await this.sleep(1);
       }
       await Helper.Log("---------------------End working---------------------- ", true);
     }
