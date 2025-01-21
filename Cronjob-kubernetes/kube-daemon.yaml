@@ -1,0 +1,59 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: logs1-pv
+spec:
+  capacity:
+    storage: 100Mi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /d/volumes/olecram-daemon/logs
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: manual  # Clase de almacenamiento explícita
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: logs1-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Mi
+  volumeName: logs1-pv  # Vincula explícitamente al PV logs1-pv
+  storageClassName: manual  
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: olecram-daemon
+  labels:
+    app: olecram-daemon
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: olecram-daemon
+  template:
+    metadata:
+      labels:
+        app: olecram-daemon
+    spec:
+      containers:
+      - name: olecram-daemon-cont
+        image: moviedomfo/olecram-daemon:1.0
+        imagePullPolicy: IfNotPresent
+        volumeMounts:
+        - name: logs1-volume
+          mountPath: /logs
+        env:
+        - name: NODE_ENV
+          value: "production"
+        - name: APP_FILES
+          value: "/logs"
+      volumes:
+      - name: logs1-volume
+        persistentVolumeClaim:
+          claimName: logs1-pvc

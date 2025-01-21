@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: olecram-daemon-deployment
+  labels:
+    app: olecram-daemon
+spec:
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: olecram-daemon
+  template:
+    metadata:
+      labels:
+        app: olecram-daemon
+    spec:
+      containers:
+        - name: olecram-daemon
+          image: moviedomfo/olecram-daemon:2.0
+          env:
+            - name: APP_NAME
+              value: "Daemon kube 1"
+            - name: APP_FILES
+              value: "/app/logs"
+          volumeMounts:
+            - name: logs-volume
+              mountPath: /app/logs
+      restartPolicy: Always 
+      volumes:
+        - name: logs-volume
+          hostPath:
+            path: /run/desktop/mnt/host/d/volumes/olecram-daemon
+            type: DirectoryOrCreate

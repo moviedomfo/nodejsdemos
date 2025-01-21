@@ -10,7 +10,15 @@ Daemon application that periodically checks for new partner updates on Boleteria
 - [Running manually from code](#deployd-run)
 - [Generate deployd](#manually-deployd)
 
-  <a name="install"></a>
+# Create image
+
+    Construyendo la imagen desde un Dockerfile y, al mismo tiempo, asignándole un nombre y un tag (moviedomfo/docker-compose:1.0).
+    
+    docker build -t moviedomfo/olecram-daemon:2.0 
+
+    docker-compose up -d
+    docker-compose build --no-cache && docker-compose up -d
+    docker-compose down && docker-compose build --no-cache && docker-compose up -d
 
 ## Install using PM2 as service management
 
@@ -43,90 +51,6 @@ Daemon application that periodically checks for new partner updates on Boleteria
 <a name="env"></a>
 
 ## Enviropment
-
-<table>
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>Valor</th>
-      <th>Explicación</th>
-    </tr>
-  </thead>
-  <tbody>
-
-    <tr>
-      <td>APP_CLIENT_NAME</td>
-      <td>Socios olecram daemon</td>
-      <td>El nombre del cliente de la aplicación.</td>
-    </tr>
-    <tr>
-      <td>APP_BOLETERIA_BASE_URL</td>
-      <td>http://192.168.200.6:7076</td>
-      <td>La URL base del servicio de boletería.</td>
-    </tr>
-    <tr>
-      <td>APP_FILES</td>
-      <td>'logs'</td>
-      <td>Directorio donde se almacenan los archivos de logs.</td>
-    </tr>
-    <tr>
-      <td>APP_REPORTS</td>
-      <td>'csv'</td>
-      <td>Directorio donde se almacenan los reportes csv</td>
-    </tr>
-    
-    <tr>
-      <td>APP_LIMITS</td>
-      <td>2</td>
-      <td>Cantidad de socios a procesar por iteracion del servicio</td>
-    </tr>
-    <tr>
-      <td>APP_SCHEDULING</td>
-      <td>"*/1 * * * *"</td>
-      <td>Programación de tareas en formato <a href="#setting-sheduling">cron</a></td>
-    </tr>
-    <tr>
-      <td>BD_PORT</td>
-      <td>1433</td>
-      <td>Puerto utilizado para la conexión a la base de datos.</td>
-    </tr>
-    <tr>
-      <td>BD_HOST</td>
-      <td>192.168.2.106</td>
-      <td>Dirección IP del servidor de la base de datos. </td>
-    </tr>
-    <tr>
-      <td>BD_INSTANCE</td>
-      <td>SQLEXPRESS</td>
-      <td>Nombre de la instancia de SQL Server.</td>
-    </tr>
-    <tr>
-      <td>BD_USER</td>
-      <td>******</td>
-      <td>Nombre de usuario</td>
-    </tr>
-    <tr>
-      <td>BD_PWD</td>
-      <td>******</td>
-      <td>Contraseña para el usuario de la base de datos.</td>
-    </tr>
-    <tr>
-      <td>BD_DATABASE_NAME</td>
-      <td>socios_integracion</td>
-      <td>Nombre de la base de datos utilizada por la aplicación.</td>
-    </tr>
-     <tr>
-      <td>BD_LOG</td>
-      <td>false | true</td>
-      <td>Indica si se deben registrar logs de scripts de ejecuciones (true para habilitar, false para deshabilitar).</td>
-    </tr>
-      <td>BD_LOCAL</td>
-      <td>false</td>
-      <td>Indica si la base de datos está en una máquina local (true) o remota (false).</td>
-    </tr>
-
-  </tbody>
-</table>
 
 <a name="deployd-run"></a>
 
