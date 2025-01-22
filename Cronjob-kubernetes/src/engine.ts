@@ -48,8 +48,8 @@ export class Engine {
       this.isRunning = true; // set as excecution
       try {
 
-        await this.DoWork(); // exec the work
-        //await this.DoWork_Test_Socio(); // exec the work
+        //await this.DoWork(); // exec the work
+        await this.DoWorkCreator(); // exec the work
 
       } finally {
         this.isRunning = false; //  Release lock upon completion
@@ -97,6 +97,39 @@ export class Engine {
 
   }
 
+  /**
+   * this code is only for test porpouses
+   */
+  async DoWorkCreator(): Promise<void> {
+    try {
+
+      while (true) {
+        await Helper.Log(`Generating Socio `, true);
+        const socio = await this._sociosService.getfake();
+
+
+        await this._sociosRepo.Insert(socio);
+
+        await Helper.Log(`End generating ${socio.documento} `, true);
+        // Generar un número aleatorio
+        const randomNumber = Math.floor(Math.random() * 10000); // Número aleatorio entre 0 y 9999
+        await Helper.Log(`Random number generated: ${randomNumber}`, true);
+        // Verificar si el número es divisible por 7
+        if (randomNumber % 7 === 0) {
+          await Helper.Log(`Random number ${randomNumber} is divisible by 7. Stopping the loop.`, true);
+
+          break; // Detener el bucle
+        }
+        await Helper.Log("---------------------End working---------------------- ", true);
+      }
+    }
+    catch (error) {
+      Helper.LogErrorFull("Error working", error, true);
+
+    }
+
+  }
+
 
 
 
@@ -123,6 +156,9 @@ export class Engine {
     })
 
   }
+
+
+
 
 
 }

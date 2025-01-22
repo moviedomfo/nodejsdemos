@@ -334,16 +334,7 @@ export class Helper {
     return isNull;
   };
 
-  public static generateRandomDNI(): number {
-    const min = 10000000; // Mínimo valor para 8 dígitos
-    const max = 99999999; // Máximo valor para 8 dígitos
 
-    // Generar número aleatorio entre min y max
-    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-
-    // Convertir a string para mantener el formato de 8 dígitos
-    return randomNumber;
-  }
 
 
   public static generateRandomNroSocio(): number {

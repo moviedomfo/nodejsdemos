@@ -8,7 +8,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: /d/volumes/olecram-daemon/logs
+    path: /run/desktop/mnt/host/d/volumes/olecram-daemon-1/logs
   persistentVolumeReclaimPolicy: Retain
   storageClassName: manual  # Clase de almacenamiento explícita
 ---
@@ -28,31 +28,31 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: olecram-daemon
+  name: olecram-daemon-1
   labels:
-    app: olecram-daemon
+    app: olecram-daemon-1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: olecram-daemon
+      app: olecram-daemon-1
   template:
     metadata:
       labels:
-        app: olecram-daemon
+        app: olecram-daemon-1
     spec:
       containers:
-      - name: olecram-daemon-cont
-        image: moviedomfo/olecram-daemon:1.0
+      - name: olecram-daemon-1-cont
+        image: moviedomfo/olecram-daemon:2.0
         imagePullPolicy: IfNotPresent
         volumeMounts:
         - name: logs1-volume
-          mountPath: /logs
+          mountPath: /app/logs
         env:
         - name: NODE_ENV
           value: "production"
         - name: APP_FILES
-          value: "/logs"
+          value: "/app/logs"
       volumes:
       - name: logs1-volume
         persistentVolumeClaim:
