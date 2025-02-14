@@ -39,11 +39,10 @@ export interface SociosAttributes {
   huellas?: boolean;
   procedencia?: string;
   idEstado?: number;
-  crc32Foto?: number;
   ultimaModificacion_epoch: number;
 }
 
-export type SociosOptionalAttributes = "numSocio" | "idAbono" | "vencimientoAbono" | "contadorAbono" | "sector" | "seccion" | "precioCategoria" | "tipoSocio" | "idTipoSocio" | "cobrador" | "nombre" | "tipoDocumento" | "calle" | "numero" | "localidad" | "codigoPostal" | "telefono" | "tarjeta" | "contadorSocio" | "nacimiento" | "ingreso" | "ultimoPago" | "ultimaModificacion" | "estado" | "formaDePago" | "filial" | "idSexo" | "sexo" | "provincia" | "nacionalidad" | "celular" | "mail" | "huellas" | "procedencia" | "idEstado" | "crc32Foto" | "ultimaModificacion_epoch";
+export type SociosOptionalAttributes = "numSocio" | "idAbono" | "vencimientoAbono" | "contadorAbono" | "sector" | "seccion" | "precioCategoria" | "tipoSocio" | "idTipoSocio" | "cobrador" | "nombre" | "tipoDocumento" | "calle" | "numero" | "localidad" | "codigoPostal" | "telefono" | "tarjeta" | "contadorSocio" | "nacimiento" | "ingreso" | "ultimoPago" | "ultimaModificacion" | "estado" | "formaDePago" | "filial" | "idSexo" | "sexo" | "provincia" | "nacionalidad" | "celular" | "mail" | "huellas" | "procedencia" | "idEstado" | "ultimaModificacion_epoch";
 export type SociosCreationAttributes = Optional<SociosAttributes, SociosOptionalAttributes>;
 
 export class Socios extends Model<SociosAttributes, SociosCreationAttributes> implements SociosAttributes {
@@ -84,7 +83,6 @@ export class Socios extends Model<SociosAttributes, SociosCreationAttributes> im
   huellas?: boolean;
   procedencia?: string;
   idEstado?: number;
-  crc32Foto?: number;
   ultimaModificacion_epoch!: number;
 
 
@@ -239,10 +237,7 @@ export class Socios extends Model<SociosAttributes, SociosCreationAttributes> im
         type: DataTypes.INTEGER,
         allowNull: true
       },
-      crc32Foto: {
-        type: DataTypes.BIGINT,
-        allowNull: true
-      },
+   
       ultimaModificacion_epoch: {
         type: DataTypes.BIGINT,
         allowNull: false,

@@ -233,7 +233,6 @@ export const mapSocio = (socioFromDB: SociosAttributes): SociosDE => {
     huellas: socioFromDB.huellas,
     procedencia: socioFromDB.procedencia,
     idEstado: socioFromDB.idEstado,
-    crc32Foto: socioFromDB.crc32Foto
 
   };
 

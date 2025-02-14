@@ -121,9 +121,7 @@
  *         idEstado:
  *           type: integer
  *           description: ID del estado del socio
- *         crc32Foto:
- *           type: integer
- *           description: CRC32 de la foto del socio
+
  */
 export class SociosDE {
     documento!: number;
@@ -163,5 +161,4 @@ export class SociosDE {
     huellas?: boolean;
     procedencia?: string;
     idEstado?: number;
-    crc32Foto?: number;
 }
