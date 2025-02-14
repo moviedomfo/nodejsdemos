@@ -43,7 +43,7 @@ spec:
     spec:
       containers:
       - name: olecram-daemon-1-cont
-        image: moviedomfo/olecram-daemon:2.0
+        image: moviedomfo/olecram-daemon:3.0
         imagePullPolicy: IfNotPresent
         volumeMounts:
         - name: logs1-volume
