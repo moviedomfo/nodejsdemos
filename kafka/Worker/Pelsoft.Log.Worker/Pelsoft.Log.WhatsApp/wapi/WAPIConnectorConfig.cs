@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace konectaAPI.wapi
+namespace rapiAPI.wapi
 {
     //Se crea esta nueva clase ya que la clase WAPIConnecto posee variables estáticas que en caso
     //de haber concuerrencia de hilos con diferentes configuraciones puede generar resultados

@@ -4,7 +4,7 @@ using Pelsoft.Log.Common.Services;
 using Pelsoft.Log.WhatsApp.BE;
 using Pelsoft.Log.WhatsApp.DAC;
 using Pelsoft.Log.WhatsApp.wapi;
-using konectaAPI.wapi;
+using rapiAPI.wapi;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System;
@@ -20,7 +20,7 @@ namespace Pelsoft.Log.WhatsApp
     /// <summary>
     /// 
     /// </summary>
-    public class WhatsAppPublishDMProcessor : ProcessorBase 
+    public class WhatsAppPublishDMProcessor : ProcessorBase
     {
         private WhatsAppConfigBE _WhatsAppConfig;
         private ApplicationSettingsBE _ApplicationSettings;
@@ -45,12 +45,12 @@ namespace Pelsoft.Log.WhatsApp
         //}
 
 
-        public override async Task DoWork(string jsonMessage,string topic)
+        public override async Task DoWork(string jsonMessage, string topic)
         {
             var message = TrySerialize<KafkaWhatsAppMessage>(jsonMessage);
 
             await Log();
-            
+
         }
 
         /// <summary>
@@ -482,7 +482,7 @@ namespace Pelsoft.Log.WhatsApp
                 if (wHasJsonPub)
                 {
                     wJson = _PublishDetails.First().PDJsonPublication;
-                    wMsg = (messageHSM)Fwk.HelperFunctions.SerializationFunctions.DeSerializeObjectFromJson(typeof(messageHSM),wJson);
+                    wMsg = (messageHSM)Fwk.HelperFunctions.SerializationFunctions.DeSerializeObjectFromJson(typeof(messageHSM), wJson);
                 }
                 else
                 {

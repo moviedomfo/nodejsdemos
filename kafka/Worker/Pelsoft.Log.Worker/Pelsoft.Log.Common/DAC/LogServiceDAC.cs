@@ -42,7 +42,7 @@ namespace Pelsoft.Log.Common.DAC
 
         }
 
-   
+
         /// <summary>
         /// 
         /// </summary>
@@ -108,14 +108,14 @@ namespace Pelsoft.Log.Common.DAC
             item.AuditMailSetting.Audit_MailSMPT_PORT = 25;
             item.AuditMailSetting.Audit_MailRecipients = "";
             item.AuditMailSetting.Audit_MailSMTP_SERVER = "";
-            item.AuditMailSetting.Audit_MailSender = "konecta@grupokonecta.com";
+            item.AuditMailSetting.Audit_MailSender = "rapi@companyrapi.com";
             item.AuditMailSetting.Audit_MailPassword = "";
-            item.AuditMailSetting.Audit_MailUserName = "konecta@grupokonecta.com";
+            item.AuditMailSetting.Audit_MailUserName = "rapi@companyrapi.com";
 
             item.AuditMailSetting.Audit_MailEnableSSL = false;
 
 
-                 return item;
+            return item;
 
         }
 

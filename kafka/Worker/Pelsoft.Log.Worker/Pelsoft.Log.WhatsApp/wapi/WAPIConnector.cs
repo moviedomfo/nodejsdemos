@@ -1,5 +1,5 @@
 //using Fwk.HelperFunctions;
-//using konectaAPI.wapi.Common.BE;
+//using rapiAPI.wapi.Common.BE;
 //using System;
 //using System.Collections.Generic;
 //using System.IO;
@@ -14,7 +14,7 @@
 
 
 
-//namespace konectaAPI.wapi
+//namespace rapiAPI.wapi
 //{
 //    public class WAPIConnector
 //    {
@@ -69,7 +69,7 @@
 //                //proxy = new WebProxy(proxyURI, true, null, credentials);
 
 //                proxy = new WebProxy(proxyURI);
-//                //proxy.Credentials = new System.Net.NetworkCredential("moviedo", "Konecta+45", "allus-ar");
+//                //proxy.Credentials = new System.Net.NetworkCredential("moviedo", "rapi+45", "allus-ar");
 //                proxy.Credentials = new System.Net.NetworkCredential(wapiHelper.apiConfig.proxyUser, wapiHelper.apiConfig.proxyPassword, wapiHelper.apiConfig.proxyDomain);
 
 //            }
@@ -229,7 +229,7 @@
 //            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 //            var url = string.Format("{0}rest/services/send", wapiHelper.apiConfig.apiDomain);
 //            //var url = string.Format("{0}api/wapi/senMessagedHSM_async", wapiHelper.apiConfig.apiDomain);
-            
+
 //            try
 //            {
 //                using (var httpClient = GetHttpClient())
@@ -240,7 +240,7 @@
 //                    httpClient.DefaultRequestHeaders.TryAddWithoutValidation("AuthenticationToken", WAPIConnector.currenToken);
 
 //                    var response = await httpClient.PostAsync(url, content);
-                   
+
 //                    return response;
 //                }
 //            }
@@ -498,7 +498,7 @@
 //            {
 //                try
 //                {
-//                    konectaAPI.wapi.DAC.konectaAPIDAC.Insert(messageBot);
+//                    rapiAPI.wapi.DAC.rapiAPIDAC.Insert(messageBot);
 //                }
 //                catch (Exception ex)
 //                {
@@ -664,7 +664,7 @@
 //                    try
 //                    {
 //                        //si ocurre error simplemente deja el msg en la cola
-//                        konectaAPI.wapi.DAC.konectaAPIDAC.Insert(item);
+//                        rapiAPI.wapi.DAC.rapiAPIDAC.Insert(item);
 //                    }
 //                    catch { }
 

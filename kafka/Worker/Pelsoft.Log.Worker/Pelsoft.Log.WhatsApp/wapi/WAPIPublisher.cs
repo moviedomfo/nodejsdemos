@@ -13,7 +13,7 @@ using Pelsoft.Log.WhatsApp.wapi;
 using Fwk.HelperFunctions;
 
 
-namespace konectaAPI.wapi
+namespace rapiAPI.wapi
 {
     public class WAPIPublisher
     {

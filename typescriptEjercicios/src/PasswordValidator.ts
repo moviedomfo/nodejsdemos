@@ -25,7 +25,7 @@ export const ValidarPassword_Test = () => {
     const password4 = "password1*"; // No cumple con la mayúscula
     const password5 = "Password$"; // No cumple con el número
 
-    const password6 = "Konecta235**"; // Cumple con todas las reglas
+    const password6 = "rapi235**"; // Cumple con todas las reglas
 
     console.log(`${password1} --> ${validarPassword(password1)}`); // true
     console.log(`${password2} --> ${validarPassword(password2)}`); // false

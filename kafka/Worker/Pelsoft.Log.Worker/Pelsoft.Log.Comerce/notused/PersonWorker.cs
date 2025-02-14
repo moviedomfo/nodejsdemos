@@ -22,13 +22,13 @@
 //    {
 //        //private readonly int commitPeriod = 1;
 //        Timer _Timer; 
-        
+
 
 //        //chanel/AccountDetailUnique  : WHATSAPP-
 //        //const string TOPICS = "customers,providers";
 //        //const string GROUP_ID = "rrhh-site01";
 
-     
+
 //        private readonly ILogger<PersonWorker> _logger;
 //        private readonly IProcessor _processor;
 
@@ -36,7 +36,7 @@
 
 //        public PersonWorker( ILogger<PersonWorker> logger, IPelsoftLogService epironLog, IOptions<WorkerConfig> workerConfig, IConfiguration _configuration)
 //        {
-            
+
 //            _logger = logger;
 //            _processor = new PersonsProcessor(epironLog, _configuration);
 
@@ -48,7 +48,7 @@
 //        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
 //        {
 
-           
+
 //            //Kafka consumer configuration
 //            //var config = new ConsumerConfig
 //            //{
@@ -130,15 +130,15 @@
 //        //{
 //        //    if (res.Message != null)
 //        //    {
-                
+
 
 
 //        //        string log;
-//        //        //Este codigo solo es para debug y testing. No debe ser incluido en un worker de konecta
+//        //        //Este codigo solo es para debug y testing. No debe ser incluido en un worker de rapi
 //        //        var person = JsonConvert.DeserializeObject<PersonBE>(res.Message.Value);
 //        //        if (person != null)
 //        //        {
-//        //            //Este codigo SI es de un worker de konecta
+//        //            //Este codigo SI es de un worker de rapi
 //        //            await _processor.DoWork(res.Message.Value);
 
 //        //            person.kafka_Topic = res.Topic;
@@ -215,7 +215,7 @@
 //        /// <returns></returns>
 //        public override Task StartAsync(CancellationToken cancellationToken)
 //        {
-            
+
 //            AccountsInstancesServicesBE accountsInstancesServicesBE = new AccountsInstancesServicesBE();
 //            accountsInstancesServicesBE.AccountDetailDescrip = "AccountDetailDescrip";
 //            accountsInstancesServicesBE.AccountDetailUnique = Guid.NewGuid();
@@ -243,7 +243,7 @@
 //        private void timmerElapsed(object sender)
 //        {
 //            string log = string.Format("Timmer runing {0}", DateTimeOffset.Now.ToString());
-            
+
 
 //            try
 //            {
