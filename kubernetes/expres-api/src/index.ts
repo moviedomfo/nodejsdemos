@@ -24,7 +24,6 @@ if (!AppConstants.APP_PORT) {
 
 const app = express();
 
-app.set("views", path.join(__dirname, "views"));
 app.engine("html", require("ejs").renderFile);
 app.set("view engine", "html");
 /**
@@ -52,7 +51,7 @@ app.get("/health", (_req, res) => {
 });
 
 app.get("/", function (_req, res) {
-  res.render("index");
+  res.json({ message: "Bienvenido a la API" });
 });
 // Swagger documentation route
 app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
