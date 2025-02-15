@@ -12,4 +12,4 @@ spec:
   - protocol: TCP
     port: 8080          # Puerto del contenedor
     targetPort: 8080    # Puerto en el contenedor
-    nodePort: 31000    # Puerto de tu PC (este debe estar en el rango 30000-32767 para NodePort)
+    nodePort: 31001    # Puerto de tu PC (este debe estar en el rango 30000-32767 para NodePort)

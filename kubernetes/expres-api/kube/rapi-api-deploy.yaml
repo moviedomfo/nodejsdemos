@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: rapi-api-cont
-        image: moviedomfo/rapi-api:2.1
+        image: moviedomfo/rapi-api:1.0
         ports:
         - containerPort: 80

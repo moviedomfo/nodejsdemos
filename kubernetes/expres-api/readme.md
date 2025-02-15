@@ -1,146 +1,87 @@
-# Boleteria Vip rapi api
+# Express rapi api
 
     API that allows consume Socios Updates by diferents endpoints .-
 
 ## Table of Contents
 
-- [ Install on-premise ](#install)
-- [ Run locally ](#run-locally)
-- [ Enviropments ](#env)
+- [Run locally](#run-locally)
+- [Enviropments](#env)
 
 <a name="install"></a>
 
-## Make deployd without docker
+## build docker image
 
-### using PM2 as service management
+    docker build -t moviedomfo/rapi-api:1.0 .
 
-    1. On the project folder run yarn build to generate dist folder and bounde.js file
-    ./dist/boundle.js
+## kubernetes
 
-    2.  Install PM2 on the on-premise server:
-            npm install -g pm2
+cd kube
+kubectl apply -f .
 
-    3.  Create a new folder to host the service:
-          %server_path%
+## check
 
-    4.  Copy the 'dist' content inside the previously mentioned folder
-        ./dist to   %server_path%/dist
+kubectl get all
 
-    5. Over this folder right click and open new NodeJs console or powershell
-        execute this command:
+1️⃣ - Pod :Es la instancia de tu aplicación corriendo dentro del clúster.
 
-        yarn install --production
+  pod/rapi-api-dep-7547d8bd-z55n4                  1/1     Running  
 
-    6. Copy all filesToRelease folder content to %server_path% (not the folder, only it content)
+2️⃣ Service (NodePort) Es un servicio que expone el pod al exterior.
+  service/rapi-api-service   NodePort    10.105.182.112   <none>        8080:31001/TCP
 
-            filesToRelease/*.* --> %server_path%
+3️⃣ Deployment : gestiona la creación y escalabilidad de los pods.
+  deployment.apps/rapi-api-dep  1/1
+  ✅ Detalles:
 
-    7. Edit 'serviceStart_pm2.bat' to change the 'cd' command to point to %server_path%.
+    Nombre: rapi-api-dep
+    Réplicas deseadas: 1 (solo hay una instancia corriendo).
+    Réplicas actuales: 1 (el deployment ha creado el pod correctamente).
+    Réplicas listas: 1 (el pod está corriendo sin problemas).
 
-    8. Run
+📌 Conclusión: Este deployment asegura que siempre haya al menos un pod ejecutando rapi-api.
 
-        yarn install --production
+4️⃣ ReplicaSet :Es el objeto que garantiza que el número correcto de pods esté corriendo.
 
-    9. copy .env file and copy to %server_path%
+    replicaset.apps/rapi-api-dep-7547d8bd                  1         1         1       32s
 
-        .env --> %server_path%/.env
+📌 Resumen gráfico de lo que está corriendo
 
-    10. In th Console cd to %server_path% and run:
+        +------------------------------------------------------+
+        |                      Deployment                     |
+        |   (rapi-api-dep)                                    |
+        |   - Gestiona los pods                               |
+        |   - Controla la cantidad de réplicas               |
+        +------------------------------------------------------+
+                    |      
+                    v
+        +------------------------------------------------------+
+        |                     ReplicaSet                       |
+        |   (rapi-api-dep-7547d8bd)                           |
+        |   - Asegura que el número de pods sea el correcto  |
+        +------------------------------------------------------+
+                    |      
+                    v
+        +------------------------------------------------------+
+        |                        Pod                           |
+        |   (rapi-api-dep-7547d8bd-z55n4)                     |
+        |   - Ejecuta el contenedor de la API                 |
+        +------------------------------------------------------+
+                    |      
+                    v
+        +------------------------------------------------------+
+        |                     Service                         |
+        |   (rapi-api-service)                                |
+        |   - Expone la API fuera del clúster                 |
+        |   - Disponible en: NodePort 31001                   |
+        +------------------------------------------------------+
 
-        pm2 start ecosystem.config.js
+## rapi-api-ingress.yaml
 
-    10.1 Type pm2 ls to  check if the process is within the PM2 process list
+📌 Explicación del Ingress:
 
-        The name that is in the "ecosystem.config.js" file should appear
-
-<a name="run-locally"></a>
-
-<a name="env"></a>
-
-## Setting Enviropment
-
-<table>
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>Valor</th>
-      <th>Explicación</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>APP_VERSION</td>
-      <td>1.0</td>
-      <td>La versión actual de la aplicación.</td>
-    </tr>
-    <tr>
-      <td>APP_CLIENT_NAME</td>
-      <td>Socios rapi API</td>
-      <td>El nombre del cliente de la aplicación.</td>
-    </tr>
-    <tr>
-      <td>APP_PORT</td>
-      <td>3016</td>
-      <td>Puerto donde correra la app </td>
-    </tr>
-    <tr>
-      <td>APP_LOGS_PATH</td>
-      <td>'./files'</td>
-      <td>Directorio donde se almacenan los archivos de logs (de momento no se usa).</td>
-    </tr>
-    <tr>
-      <td>APP_BASE_URL</td>
-      <td>http://localhost </td>
-      <td>solo a fines de logs . para indicar donde esta alojada la api</td>
-    </tr>
-    <tr>
-      <td>APP_SCHEDULING</td>
-      <td>"*/1 * * * *"</td>
-      <td>Programación de tareas en formato <a href="#setting-sheduling">cron</a></td>
-    </tr>
-    <tr>
-      <td>BD_PORT</td>
-      <td>1433</td>
-      <td>Puerto utilizado para la conexión a la base de datos.</td>
-    </tr>
-    <tr>
-      <td>BD_HOST</td>
-      <td>localhost</td>
-      <td>Dirección IP / nmombre del servidor de la base de datos. </td>
-    </tr>
-    <tr>
-      <td>BD_INSTANCE</td>
-      <td>SQLEXPRESS</td>
-      <td>Nombre de la instancia de SQL Server.</td>
-    </tr>
-    <tr>
-      <td>BD_USER</td>
-      <td>******</td>
-      <td>Nombre de usuario</td>
-    </tr>
-    <tr>
-      <td>BD_PWD</td>
-      <td>******</td>
-      <td>Contraseña para el usuario de la base de datos.</td>
-    </tr>
-    <tr>
-      <td>BD_DATABASE_NAME</td>
-      <td>socios_integracion</td>
-      <td>Nombre de la base de datos utilizada por la aplicación.</td>
-    </tr>
-    <tr>
-      <td>BD_LOG</td>
-      <td>false | true</td>
-      <td>Indica si se deben registrar logs de scripts de ejecuciones (true para habilitar, false para deshabilitar).</td>
-    </tr>
-    <tr>
-      <td>BD_LOCAL</td>
-      <td>false</td>
-      <td>Indica si la base de datos está en una máquina local (true) o remota (false).</td>
-    </tr>
-
-  </tbody>
-</table>
+    Define el host rapi.local (podés modificarlo o agregarlo en /etc/hosts).
+    Redirige /cliente1 al servicio rapi-api-cliente1-service.
+    Redirige /cliente2 al servicio rapi-api-cliente2-service.
 
 ## Run locally
 
