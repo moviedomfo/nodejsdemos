@@ -1,7 +1,7 @@
 {
   "name": "member-rapi-api",
   "version": "1.0.3",
-  "description": "Express server that expose API to interactuate between  Wolkvox & SQL Express",
+  "description": "Express server that expose API to interactuate between  rapivox & SQL Express",
   "main": "index.js",
   "scripts": {
     "start": "node dist/index.js",
