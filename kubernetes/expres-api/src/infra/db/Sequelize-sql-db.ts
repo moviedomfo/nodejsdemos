@@ -6,7 +6,6 @@ const user = AppConstants.BD_USER;
 const database = AppConstants.BD_DATABASE_NAME;
 const password = AppConstants.BD_PWD;
 // const host = process.env.BD_HOST!;
-const logging = AppConstants.BD_LOG;
 
 
 
@@ -14,7 +13,7 @@ const dbremoto = new Sequelize(database, user, password, {
   dialect: "mssql",
   host: AppConstants.BD_HOST,
   port: Number(AppConstants.DB_PORT),
-  logging: AppConstants.BD_LOG,
+  logging: AppConstants.BD_LOG === true ? console.log : false, // ✅ Asegura que logging sea válido
   dialectOptions: {
     instanceName: AppConstants.BD_INSTANCE,
     encrypt: false,
@@ -43,7 +42,8 @@ const db_local = new Sequelize(database, user, password, {
     },
     trustServerCertificate: true,
   },
-  logging
+  logging: AppConstants.BD_LOG === true ? console.log : false, // ✅ Asegura que logging sea válido
+
 });
 
 const db_local_te = new Sequelize(database, user, password, {
@@ -59,7 +59,8 @@ const db_local_te = new Sequelize(database, user, password, {
     },
     trustServerCertificate: true,
   },
-  logging
+  logging: AppConstants.BD_LOG === true ? console.log : false, // ✅ Asegura que logging sea válido
+
 });
 const db = getDB();
 

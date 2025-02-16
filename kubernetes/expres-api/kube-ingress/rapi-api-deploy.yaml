@@ -19,6 +19,9 @@ spec:
         image: moviedomfo/rapi-api:1.0
         ports:
         - containerPort: 3050
+        env:
+        - name: APP_CLIENT_NAME
+          value: "RAPI API Express Cliente 1"
 
 ---
 apiVersion: apps/v1
@@ -42,3 +45,6 @@ spec:
         image: moviedomfo/rapi-api:1.0
         ports:
         - containerPort: 3050
+        env:
+        - name: APP_CLIENT_NAME
+          value: "RAPI API Express Cliente 2"
