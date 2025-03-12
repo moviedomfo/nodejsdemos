@@ -11,6 +11,7 @@ import { ValidarPassword_Test } from "./PasswordValidator";
 import { DateDemos } from "./DateDemos";
 import { flatPersons } from "./Arrays/flat";
 import { flatMapPersons } from "./Arrays/flatMap";
+import { LogMathCeilUse } from "./Math/Numbers";
 
 //ValidarPassword_Test();
 // const message = "Pelsoft";
@@ -67,4 +68,5 @@ import { flatMapPersons } from "./Arrays/flatMap";
 //----flat
 //flatPersons();
 //----flatMap
-flatMapPersons();
+//flatMapPersons();
+LogMathCeilUse();
