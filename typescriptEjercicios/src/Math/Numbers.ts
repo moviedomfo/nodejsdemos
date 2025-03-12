@@ -109,7 +109,7 @@ export function LogMathCeilUse() {
     // Ejemplos de uso:
     console.log(ceilDecimal(12.3456, 2));  // 12.35
     console.log(floorDecimal(12.3456, 2)); // 12.34
-    
+
     console.log(roundDecimal(12.345, 2)); // 12.35
 
     // console.log(ceilDecimal(7.891, 1));  // 7.9
@@ -129,4 +129,8 @@ export function LogMathCeilUse() {
 
 
     // console.log(Math.ceil(0.95)); // 1
+
+    const t = 44.194;
+    const subTotal = Math.ceil(t * 100) / 100;
+    console.log(subTotal); // 44.2
 }
