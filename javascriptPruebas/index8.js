@@ -3,7 +3,8 @@ import chalk from 'chalk';
 
 
 
-//Podemos ver que cuando la variable es actualizada dentro del condicional if, el valor de esta se actualiza a 20 a nivel global
+//Podemos ver que cuando la variable es actualizada dentro del condicional if, 
+// el valor de esta se actualiza a 20 a nivel global
 function explainVar(){
     console.log(chalk.italic('---------var------------'));  
     var a = 10;

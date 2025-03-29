@@ -13,16 +13,15 @@ console.log(numeros);
 
 console.log();
 
+console.log(chalk.cyan("--------------arrayCopy = [...numeros] Y LE AGREGAMOS ELEMENTOS----------------"));
+console.log('arrayCopy[0] = 20000');
+console.log('arrayCopy[4] = 4222.5');
 
 const arrayCopy = [...numeros];
 arrayCopy[0] = 20000;
 arrayCopy[4] = 4222.5;
 
 
-
-console.log(chalk.cyan("--------------arrayCopy = [...numeros] Y LE AGREGAMOS ELEMENTOS----------------"));
-console.log('arrayCopy[0] = 20000');
-console.log('arrayCopy[4] = 4222.5');
 console.log();
 console.log(arrayCopy);
 console.log();

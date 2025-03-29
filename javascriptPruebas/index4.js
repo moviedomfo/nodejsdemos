@@ -19,7 +19,9 @@ console.log(chalk.yellow(products1));
 console.log(chalk.red('----------------------COPY VECTORES Referencia------------------'));
 const products2 = products;
 console.log(chalk.green(products2));
+
 products[0].name = "Modificado 2";
+
 console.log(chalk.green(products2));
 
 

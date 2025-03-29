@@ -1,4 +1,12 @@
-// Adapter: Convierte
+// Adapter: Convierte la interfaz de una clase en otra interfaz que el cliente espera.
+// Permite que clases con interfaces incompatibles trabajen juntas.
+
+//Actúa como un puente entre dos interfaces, permitiendo que una clase use la funcionalidad de otra clase sin necesidad de modificar su código original.
+// 
+// En este ejemplo, el patrón se utiliza para adaptar la interfaz de un servicio externo (ANMADService) a la interfaz que espera el cliente (Laboratorio).
+
+// Al utilizar un adaptador, se puede mantener la separación de responsabilidades y facilitar el mantenimiento del código a largo plazo.
+
 // Un adaptador envuelve uno de los objetos (que debe utilizar tu app -Servicio-) para esconder la complejidad de la conversión que tiene nececita
 // tu app. Se trata de un objeto especial que convierte la interfaz de un objetoX, de forma que otro objeto_A pueda comprenderla.
 //Esta implementación utiliza el principio de composición de objetos:
@@ -8,7 +16,8 @@
 
 // La Interfaz con el Cliente describe un protocolo que otras clases deben seguir para poder colaborar con el código cliente.
 
-// Servicio es alguna clase útil (normalmente de una tercera parte o heredada). El cliente no puede utilizar directamente esta clase porque tiene una interfaz incompatible.
+// Servicio es alguna clase útil (normalmente de una tercera parte o heredada). 
+// El cliente no puede utilizar directamente esta clase porque tiene una interfaz incompatible.
 
 // La clase Adaptadora es capaz de trabajar tanto con la clase cliente como con la clase de servicio:
 // implementa la interfaz con el cliente, mientras "envuelve" el objeto de la clase de servicio.

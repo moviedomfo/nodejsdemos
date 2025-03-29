@@ -1,3 +1,37 @@
+
+## index index Spreed operator Samples
+
+## index2 Operaciones con vectores: Copy spread operator
+
+## index3 Uso de map
+
+## index4 - Uso de Copy con: VECTORES Referencia spread, map , slice
+
+## index5 , 6 7 Async Callbacks unirest Axios fetch
+
+## index8 var let const
+
+## index9 Desestructuración + Arrow Function
+
+## index10 Sort By name, use of reduce
+
+## index11 Array -> Sort by property
+
+## index12 Retorna un array de una enumeracion
+
+## index13 paso de objetos destructurados a funciones
+
+## index14 Nullish coalescing
+
+## index15 Split array into chunks : take an Array as imput and split it into others with a certain number of elements (items per chunk)
+
+## index16 Array ->Group
+
+## index17 DaysJS
+
+## index17 Array -> Eliminar duplicados
+
+
 #Execute :
 node index
 
@@ -43,35 +77,3 @@ Solucion 2 --set setting headers
 
 A Complete Guide to Securely Connecting Node.js and Axios (JS) Using Mutual TLS
 https://smallstep.com/hello-mtls/doc/combined/nodejs/axios
-
-## index index Spreed operator Samples
-
-## index2 Operaciones con vectores: Copy spread operator
-
-## index3 Uso de map
-
-## index4 - Uso de Copy con: VECTORES Referencia spread, map , slice
-
-## index5 , 6 7 Async Callbacks unirest Axios fetch
-
-## index8 var let const
-
-## index9 Desestructuración + Arrow Function
-
-## index10 Sort By name, use of reduce
-
-## index11 Array -> Sort by property
-
-## index12 Retorna un array de una enumeracion
-
-## index13 paso de objetos destructurados a funciones
-
-## index14 Nullish coalescing
-
-## index15 Split array into chunks : take an Array as imput and split it into others with a certain number of elements (items per chunk)
-
-## index16 Array ->Group
-
-## index17 DaysJS
-
-## index17 Array -> Eliminar duplicados
