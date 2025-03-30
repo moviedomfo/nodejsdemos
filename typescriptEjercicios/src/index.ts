@@ -12,6 +12,7 @@ import { DateDemos } from "./DateDemos";
 import { flatPersons } from "./Arrays/flat";
 import { flatMapPersons } from "./Arrays/flatMap";
 import { LogMathCeilUse } from "./Math/Numbers";
+import { pattern_bridge_client } from "./Patterns/Estructurales/Bridge/Cliente";
 
 //ValidarPassword_Test();
 // const message = "Pelsoft";
@@ -69,4 +70,5 @@ import { LogMathCeilUse } from "./Math/Numbers";
 //flatPersons();
 //----flatMap
 //flatMapPersons();
-LogMathCeilUse();
+//LogMathCeilUse();
+pattern_bridge_client()

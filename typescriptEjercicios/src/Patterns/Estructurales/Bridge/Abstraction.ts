@@ -7,7 +7,7 @@ import { IDevice } from "./Implementation";
 
 
 /**
- * La capa GUI de la aplicación.
+ * 
  * The Abstraction defines the interface for the abstraction and maintains a reference to an object of type Implementation. 
  * capa de control de alto nivel no tiene que hacer ningún trabajo real por su cuenta, sino que debe delegar el trabajo a la capa 
  * de implementación

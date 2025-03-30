@@ -4,6 +4,7 @@ import { IDevice } from "./Implementation";
 
 
 export class Radio implements IDevice {
+    name: string= 'Radio';
 
     private volume: number = 0;
     private chanel: number = 0;
@@ -32,6 +33,7 @@ export class Radio implements IDevice {
 }
 
 export class Tv implements IDevice {
+    name: string= 'Tv';
     private volume: number = 0;
     private chanel: number = 0;
     isEnabled(): boolean {

@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon --exec ts-node -r tsconfig-paths/register ./src/index.ts",
     "start": "tsc && nodemon  --tls-min-v1.0   dist/index.js",
-    "restart": "rimraf dist && npm run start"
+    "restart": "rimraf dist && npm run start",
+    "build": "tsc"
   },
   "author": "Marcelo F. Oviedo",
   "license": "ISC",

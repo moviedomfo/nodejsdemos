@@ -2,8 +2,8 @@ import { RemoteControl } from './Abstraction';
 import { IDevice } from './Implementation';
 
 /**
- * RefinedAbstraction
- * The RefinedAbstraction extends the interface defined by the Abstraction and adds new functionality.
+ * RefinedAbstraction La capa GUI de la aplicación.
+ * Extends the interface defined by the Abstraction and adds new functionality.
  * This class can also override the methods defined by the Abstraction if needed.
  */
 export class AdvancedRemoteControl extends RemoteControl {
@@ -16,7 +16,11 @@ export class AdvancedRemoteControl extends RemoteControl {
         this.volumeDown();
     }
     mute(): void {
-        console.log('Muting the device...');
+        console.log('Muting the device...' + this.implementation.name);
         this.implementation.setVolume(0);
+    }
+    getTypeName(): string {
+
+        return 'AdvancedRemoteControl ' + this.implementation.name;
     }
 }

@@ -5,6 +5,7 @@
  * Una abstracción sólo se puede comunicar con un objeto de implementación a través de los métodos que se declaren aquí.
  */
 export interface IDevice {
+    name: string;
     isEnabled(): boolean;
     getChannel(): number;
     getVolume(): number;
